@@ -9,9 +9,19 @@ ISA is an API designed to facilitate the analysis of Instagram story viewers, pr
 Users authenticate by logging in with their Instagram credentials, generating a secure token necessary for API requests. While currently lacking endpoints, upcoming ones will include /stories, /stories/:story_id, /publications, /publications/:publication_id, and more.
 
 ### Next feature:
+
 - Login with instagram credentials
 - List your stories
 - Analyze the viewers of a story
+
+### Upcoming endpoints
+
+- `[POST] /auth/login`: Login with instagram credentials
+- `[GET] /users/me`: Get your user data
+- `[GET] /stories`: Get your instagram stories
+- `[GET] /stories/:story_id`: Get story insights
+- `[GET] /publications`: Get your instagram publications
+- `[GET] /publications/:story_id`: Get story insights
 
 ## Data Access
 
