@@ -2,7 +2,7 @@
 
 ## Description
 
-ISA is an API that allow you to connect to instagram an analyze your instagram stories viewers.
+ISA is an API that allow you to connect to instagram to analyze your instagram stories viewers.
 You are going to be able to know what users that are not following you are watching your stories.
 Also, you will see a list of the ones that you are not following
 
