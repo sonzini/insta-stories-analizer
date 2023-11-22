@@ -3,6 +3,7 @@
     "dtos",
     "nestjs",
     "typeorm",
+    "unfollowers",
     "uuidv"
   ]
 }
