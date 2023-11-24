@@ -18,7 +18,7 @@ export class InstagramRepository {
     await this.ig.simulate.preLoginFlow();
     await this.ig.account.login(username, password);
     const serialized = await this.ig.state.serialize();
-    await this.ig.simulate.postLoginFlow();
+    // await this.ig.simulate.postLoginFlow();
 
     return serialized;
   }

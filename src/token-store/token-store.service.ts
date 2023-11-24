@@ -13,8 +13,8 @@ export class TokenStoreService {
     return this.tokenStoreRepo.getToken(id);
   }
 
-  saveToken(token: string) {
-    return this.tokenStoreRepo.saveToken(token);
+  saveToken(id: string, token: string) {
+    return this.tokenStoreRepo.saveToken(id, token);
   }
 
   deleteToken(id: string) {

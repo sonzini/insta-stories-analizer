@@ -22,15 +22,12 @@ export class TokenStoreRepository {
     return token;
   }
 
-  async saveToken(token: string) {
+  async saveToken(id: string, token: string) {
     const tokens = await this.getTokens();
-    const id = uuidv4();
 
     tokens[id] = token;
 
     await writeFile(this.filename, JSON.stringify(tokens, null, 2));
-
-    return id;
   }
 
   async deleteToken(id: string) {

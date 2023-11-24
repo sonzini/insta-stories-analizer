@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import { InstagramRepository } from './instagram.repository';
 
 @Injectable()
@@ -11,8 +11,16 @@ export class InstagramService {
   }
 
   async login(username: string, password: string) {
-    const serialized = await this.instagramRepo.login(username, password);
-    return serialized;
+    try {
+      const serialized = await this.instagramRepo.login(username, password);
+      return serialized;
+    } catch (error) {
+      console.log(error);
+      if (error instanceof Error) {
+        throw new BadRequestException(error.message);
+      }
+      throw new BadRequestException('Invalid credentials');
+    }
   }
 
   logout() {
