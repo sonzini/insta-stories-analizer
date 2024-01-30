@@ -18,9 +18,12 @@ export class AuthService {
     // const externalToken = await this.instagramService.login(username, password);
 
     // TODO: REMOVE THIS. Temporal token to avoid requesting it to instagram
+    // -----------------------------
     const externalTokenId = '2958cf8b-0ad4-40ac-af1a-33f46dcb0bd8';
     const externalToken =
       await this.tokenStoreService.getToken(externalTokenId);
+    this.instagramService.deserialize(externalToken);
+    // -----------------------------
 
     // Get or create user
     const user =
